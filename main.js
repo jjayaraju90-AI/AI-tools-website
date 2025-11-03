@@ -59,7 +59,7 @@ const aiToolsData = [
         price: "$30/month",
         logo: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=100&h=100&fit=crop&crop=center",
         featured: false
-    },
+},
     {
         id: 6,
         name: "GitHub Copilot",
@@ -149,7 +149,7 @@ function generateStars(rating) {
 // ===== TOOL RENDERING =====
 function createToolCard(tool) {
     return `
-        <div class="tool-card" data-category="${tool.category}">
+<div class="tool-card" data-category="${tool.category}">
             <div class="tool-header">
                 <img src="${tool.logo}" alt="${tool.name} logo" class="tool-logo" loading="lazy">
                 <div>
@@ -159,7 +159,7 @@ function createToolCard(tool) {
             </div>
             <p class="tool-description">${tool.description}</p>
             <div class="tool-tags">
-                ${tool.tags.map(tag => `<span class="tool-tag">${tag}</span>`).join('')}
+                ${tool.tags.map(tag => <span class="tool-tag">${tag}</span>).join('')}
             </div>
             <div class="tool-footer">
                 <div class="tool-rating">
@@ -295,7 +295,7 @@ function initializeNewsletter() {
                 submitBtn.textContent = '✓ Subscribed!';
                 submitBtn.style.backgroundColor = 'var(--success-500)';
                 
-                setTimeout(() => {
+setTimeout(() => {
                     submitBtn.textContent = originalText;
                     submitBtn.style.backgroundColor = '';
                     newsletterForm.reset();
@@ -332,13 +332,14 @@ function initializeMobileMenu() {
 
 // ===== ANALYTICS & TRACKING =====
 function trackClick(toolName, category) {
-    console.log(`Tool clicked: ${toolName} (${category})`);
+    console.log(Tool clicked: ${toolName} (${category}));
     // In a real implementation, this would send data to your analytics service
     // Example: gtag('event', 'click', { tool_name: toolName, category: category });
     
     // Simulate affiliate link tracking
     setTimeout(() => {
-        window.open(`https://example.com/affiliate/${toolName.toLowerCase().replace(/\s+/g, '-')}`, '_blank');
+
+window.open(https://example.com/affiliate/${toolName.toLowerCase().replace(/\s+/g, '-')}, '_blank');
     }, 100);
 }
 
