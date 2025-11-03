@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools Directory - Find The Perfect AI Tool For Any Task</title>
+    <meta name="description" content="Explore our curated directory of 1,000+ AI tools for text, images, code, and more. Find the perfect AI tool for any task.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <nav class="nav-header">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i data-lucide="cpu" class="nav-logo"></i>
+                <span class="nav-title">AI Tools Hub</span>
+            </div>
+            <div class="nav-links">
+                <a href="#tools" class="nav-link">Browse Tools</a>
+                <a href="#categories" class="nav-link">Categories</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-mobile-menu" id="mobile-menu-btn">
+                <i data-lucide="menu" class="menu-icon"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Find The Perfect AI Tool For Any Task</h1>
+                <p class="hero-subtitle">Explore our curated directory of 1,000+ AI tools for text, images, code, and more.</p>
+                
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <div class="search-input-wrapper">
+                        <i data-lucide="search" class="search-icon"></i>
+                        <input 
+                            type="text" 
+                            class="search-input" 
+                            placeholder="Search for a tool or category..."
+                            id="search-input"
+                        >
+                        <button class="search-btn" id="search-btn">
+                            <i data-lucide="arrow-right" class="search-btn-icon"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quick Stats -->
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">1,000+</span>
+                        <span class="stat-label">AI Tools</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Categories</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">Free</span>
+                        <span class="stat-label">To Browse</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Filters -->
+    <section class="categories-section" id="categories">
+        <div class="container">
+            <h2 class="section-title">Browse by Category</h2>
+            <div class="category-filters" id="category-filters">
+                <!-- Categories will be dynamically loaded -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Tools Section -->
+    <section class="tools-section" id="tools">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured AI Tools</h2>
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="grid" id="grid-view-btn">
+                        <i data-lucide="grid-3x3" class="view-icon"></i>
+                    </button>
+                    <button class="view-btn" data-view="list" id="list-view-btn">
+                        <i data-lucide="list" class="view-icon"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Filter Tags -->
+            <div class="active-filters" id="active-filters">
+                <!-- Active filters will appear here -->
+            </div>
+            
+            <!-- Tools Grid -->
+            <div class="tools-grid" id="tools-grid">
+                <!-- Tools will be dynamically loaded -->
+            </div>
+            
+            <!-- Loading State -->
+            <div class="loading-state" id="loading-state" style="display: none;">
+                <div class="loading-spinner"></div>
+                <p class="loading-text">Loading AI tools...</p>
+            </div>
+            
+            <!-- No Results State -->
+            <div class="no-results" id="no-results" style="display: none;">
+                <i data-lucide="search-x" class="no-results-icon"></i>
+                <h3 class="no-results-title">No tools found</h3>
+                <p class="no-results-text">Try adjusting your search terms or filters.</p>
+                <button class="clear-filters-btn" id="clear-filters-btn">Clear All Filters</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2 class="newsletter-title">Stay Updated with Latest AI Tools</h2>
+                    <p class="newsletter-subtitle">Get weekly updates on new AI tools, features, and exclusive reviews delivered to your inbox.</p>
+                </div>
+                <form class="newsletter-form" id="newsletter-form">
+                    <div class="newsletter-input-wrapper">
+                        <input 
+                            type="email" 
+                            class="newsletter-input" 
+                            placeholder="Enter your email address"
+                            id="newsletter-email"
+                            required
+                        >
+                        <button type="submit" class="newsletter-btn">
+                            Subscribe
+                            <i data-lucide="arrow-right" class="newsletter-btn-icon"></i>
+                        </button>
+                    </div>
+                    <p class="newsletter-disclaimer">No spam, unsubscribe at any time.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i data-lucide="cpu" class="footer-logo-icon"></i>
+                        <span class="footer-title">AI Tools Hub</span>
+                    </div>
+                    <p class="footer-description">Your ultimate directory for discovering and comparing AI tools across all categories.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">
+                            <i data-lucide="twitter" class="social-icon"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i data-lucide="github" class="social-icon"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i data-lucide="linkedin" class="social-icon"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4 class="footer-section-title">Tools</h4>
+                        <a href="#" class="footer-link">Text Generation</a>
+                        <a href="#" class="footer-link">Image Creation</a>
+                        <a href="#" class="footer-link">Code Assistant</a>
+                        <a href="#" class="footer-link">Data Analysis</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4 class="footer-section-title">Resources</h4>
+                        <a href="#" class="footer-link">AI News</a>
+                        <a href="#" class="footer-link">Tool Reviews</a>
+                        <a href="#" class="footer-link">Tutorials</a>
+                        <a href="#" class="footer-link">API Docs</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4 class="footer-section-title">Company</h4>
+                        <a href="#" class="footer-link">About</a>
+                        <a href="#" class="footer-link">Contact</a>
+                        <a href="#" class="footer-link">Privacy</a>
+                        <a href="#" class="footer-link">Terms</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2024 AI Tools Hub. All rights reserved.</p>
+                <p class="footer-powered">Powered by MiniMax Agent</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <div class="mobile-menu">
+            <div class="mobile-menu-header">
+                <span class="mobile-menu-title">Menu</span>
+                <button class="mobile-menu-close" id="mobile-menu-close">
+                    <i data-lucide="x" class="menu-close-icon"></i>
+                </button>
+            </div>
+            <div class="mobile-menu-links">
+                <a href="#tools" class="mobile-menu-link">Browse Tools</a>
+                <a href="#categories" class="mobile-menu-link">Categories</a>
+                <a href="#about" class="mobile-menu-link">About</a>
+                <a href="#contact" class="mobile-menu-link">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts - Order matters! -->
+    <script src="js/tools-data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/ui.js"></script>
+    
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
